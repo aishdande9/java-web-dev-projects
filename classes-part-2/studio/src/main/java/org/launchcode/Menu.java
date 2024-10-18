@@ -30,7 +30,12 @@ public class Menu {
     }
 
     public void addMenuItem(MenuItem menuItem){
-           this.items.add(menuItem);
+        if(this.items.contains(menuItem)){
+            System.out.println("This item is already present");
+        }else{
+            this.items.add(menuItem);
+        }
+
 
     }
 

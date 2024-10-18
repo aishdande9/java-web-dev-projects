@@ -7,6 +7,51 @@ public class Course {
     private Teacher instructor;
     private ArrayList<Student> enrolledStudents;
 
+    public Course() {
+        this.topic = topic;
+        this.instructor = instructor;
+        this.enrolledStudents = enrolledStudents;
+    }
+
+
+    public void addStudent(Student student) {
+        this.enrolledStudents.add(student);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "topic='" + topic + '\'' +
+                ", instructor=" + instructor +
+                ", enrolledStudents=" + enrolledStudents +
+                '}';
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public Teacher getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Teacher instructor) {
+        this.instructor = instructor;
+    }
+
+    public ArrayList<Student> getEnrolledStudents() {
+        return enrolledStudents;
+    }
+
+    public void setEnrolledStudents(ArrayList<Student> enrolledStudents) {
+        this.enrolledStudents = enrolledStudents;
+    }
+}
+
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather than
     //  just the class fields.
 
@@ -14,4 +59,5 @@ public class Course {
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Course objects equal.
 
-}
+
+
